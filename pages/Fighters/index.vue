@@ -3,8 +3,8 @@
   
 
 <div class="container mt-10 justify-center gap-6 flex flex-wrap">
-  <div v-for="g in gamers" :key="g._id"> 
-    <Fighters :gamer="g" />
+  <div v-for="f in fighters" :key="f._id"> 
+    <Fighters :fighter="f" />
   </div>
 </div>
 
@@ -15,7 +15,7 @@
 <script setup>
 
 // fetch the gamer
-const { data: gamers } = await useFetch('https://boxer-roster-production.up.railway.app/gamers')
+const { data: fighters } = await useFetch('http://localhost:4005/fighters')
 </script>
 
 <style scoped>

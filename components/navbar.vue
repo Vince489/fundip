@@ -34,7 +34,7 @@
             <div class="hidden md:flex items-center space-x-3">
 
               <a href="/fighters" class="font-semibold py-3 px-3 text-gray-700">Fighters</a>
-              <nuxt-link to="#/blockchain" class="font-semibold py-3 px-3 text-gray-700">Blockchain</nuxt-link>
+              <nuxt-link to="/fighters" class="font-semibold py-3 px-3 text-gray-700">Blockchain2</nuxt-link>
               <nuxt-link to="#/about" class="font-semibold py-3 px-3 text-gray-700">About</nuxt-link>
               <nuxt-link to="#/contact" class="font-semibold py-3 px-3 text-gray-700">Contact</nuxt-link>
 
@@ -46,7 +46,7 @@
 
           <!-- mobile button-->
           <div id="menu-btn" class="md:hidden flex items-center">
-            <button class="mobile-menu-button">
+            <button @click="toggleMenu" class="mobile-menu-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -67,16 +67,12 @@
       </div>
 
       <!--mobile menu-->
-      <div id="mobile-menu" class="hidden duration-300 mobile-menu md:hidden">
-        <nuxt-link 
-        to="#/signup" 
-        class="block py-3 px-4 hover:bg-gray-200"
-        >Sign up</nuxt-link
+      <div v-if="toggle_menu" id="mobile-menu" class="mobile-menu md:hidden">
+        <nuxt-link to="/events" class="block py-3 px-4 hover:bg-gray-200"
+          >Events</nuxt-link
         >
-        <nuxt-link 
-        to="#/ebca" 
-        class="block py-3 px-4 hover:bg-gray-200"
-        >EBCA</nuxt-link
+        <nuxt-link to="/fighters" class="block py-3 px-4 hover:bg-gray-200"
+          >Fighters</nuxt-link
         >
       </div>
 
@@ -99,5 +95,34 @@
 </template>
 
 <script setup>
-  
+  let toggle_menu = ref(false);
+  let toggle_profile = ref(false);
+
+  onMounted(() => {
+    window.addEventListener("click", function (e) {
+      console.log(document.getElementById("menu-btn").contains(e.target));
+      if (
+        document.getElementById("mobile-menu") &&
+        !document.getElementById("menu-btn").contains(e.target)
+      ) {
+        toggle_menu.value = false;
+      }
+      if (
+        document.getElementById("profile-menu") &&
+        !document.getElementById("profile-btn").contains(e.target)
+      ) {
+        toggle_profile.value = false;
+      }
+    });
+  });
+
+  function toggleMenu() {
+    toggle_menu.value = !toggle_menu.value;
+  }
+
+  function toggleProfile() {
+    toggle_profile.value = !toggle_profile.value;
+  }
 </script>
+
+
