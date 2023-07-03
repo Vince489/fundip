@@ -15,7 +15,7 @@
 <script setup>
   const { fighters } = defineProps(['fighter'])
   const { id } = useRoute().params
-  const uri = 'http://localhost:4005/fighters/' + id 
+  const uri = 'https://virtron-production.up.railway.app/fighters/' + id 
 
   // fetch fighters
   const { data: fighter } = await useFetch(uri, { key: id })
