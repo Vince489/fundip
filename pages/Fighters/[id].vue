@@ -1,12 +1,15 @@
 <template>
-  <div class="card text-center">
+  <div class="">
+    <div class="card text-center">
     <p>Fighter ID: {{ fighter._id }}</p>
     <p>{{ fighter.firstName }}</p>
     <p>{{ fighter.lastName }}</p>
-    <img :src="fighter.img" alt="fighter image">
+    <img :src="fighter.image" alt="fighter image">
     <p>{{ fighter.wins }} Wins</p>
-    <p>Earnings: ${{ fighter.ovr }}</p>   
+    <p>Overall: {{ fighter.ovr }}</p>   
   </div>
+  </div>
+  
 </template>
 
 <script setup>

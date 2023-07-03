@@ -100,7 +100,6 @@
 
   onMounted(() => {
     window.addEventListener("click", function (e) {
-      console.log(document.getElementById("menu-btn").contains(e.target));
       if (
         document.getElementById("mobile-menu") &&
         !document.getElementById("menu-btn").contains(e.target)
