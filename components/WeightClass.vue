@@ -1,6 +1,6 @@
 <template>
   <div class="container p-8 pt-18 flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-3xl font-semibold mr-8">All Fighters</h1>
+      <h1 class="text-3xl font-semibold mr-8 mb-4 md:mb-0">All Fighters</h1>
       <div class="flex flex-col md:flex-row">
         <div class="flex justify-between items-center pr-4">
           <input type="text" class="border border-gray-300 rounded-md py-2 px-4 w-full md:w-96" placeholder="Search fighters...">
@@ -28,13 +28,13 @@
 
     <div class="container mt-10 justify-center gap-6 flex flex-wrap">
       <div v-for="fighter in filteredFighters" :key="fighter._id"> 
-        <Fighters2 :fighter="fighter" />
+        <Fighters :fighter="fighter" />
       </div>
     </div>
 </template>
 
 <script>
-import Fighters2 from '@/components/Fighters2.vue'
+import Fighters from '@/components/Fighters.vue'
 
 export default {
   data() {
@@ -53,7 +53,7 @@ export default {
     }
   },
   components: {
-    Fighters2
+    Fighters
   },
   mounted() {
     this.fetchFighters()

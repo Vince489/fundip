@@ -27,9 +27,9 @@
           </button>
         </div>
       </form>
-      <p>Gamertag: {{ gamerTag }}</p>
+      <!-- <p>Gamertag: {{ gamerTag }}</p>
       <p>Email: {{ email }}</p>
-      <p>Password: {{ password }}</p>
+      <p>Password: {{ password }}</p> -->
 
       <p class="text-center text-gray-500 text-xs">
         &copy;2023 Planet Virtron. All rights reserved.

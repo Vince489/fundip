@@ -68,7 +68,3 @@
 <script setup>
   const { fighter } = defineProps(['fighter'])
 </script>
-
-<style scoped>
-
-</style>
