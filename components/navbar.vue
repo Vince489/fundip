@@ -35,7 +35,7 @@
 
               <nuxt-link to="/fighters" class="font-semibold py-3 px-3 text-gray-700">Fighters</nuxt-link>
               <nuxt-link to="/ebca" class="font-semibold py-3 px-3 text-gray-700">EBCA</nuxt-link>
-              <nuxt-link to="#/about" class="font-semibold py-3 px-3 text-gray-700">About</nuxt-link>
+              <nuxt-link to="/about" class="font-semibold py-3 px-3 text-gray-700">About</nuxt-link>
               <nuxt-link to="#/contact" class="font-semibold py-3 px-3 text-gray-700">Contact</nuxt-link>
 
             </div>
