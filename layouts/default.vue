@@ -3,7 +3,7 @@
     <Navbar />
   </div>
 
-  <div class="container p-6">
+  <div class="pt-28 bg-gray-900	text-white">
     <slot />
   </div>
 </template>
