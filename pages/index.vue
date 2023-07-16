@@ -36,11 +36,11 @@
 
         <div class="two lg:w-1/2">
           <div>
-            <img class="rounded-t-lg lg:rounded-l-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
+            <img class="lg:rounded-l-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
           </div>
         </div>     
 
-        <div class="one lg:w-1/2 bg-gray-700 xl:rounded-b-lg lg:rounded-r-lg">
+        <div class="one lg:w-1/2 bg-gray-700 lg:rounded-r-lg">
 
           <div class="p-10">        
             <h2 class="pb-5">Lamar Wilson</h2>
@@ -58,7 +58,7 @@
 
       <div class="flex flex-col-reverse max-w-6xl lg:flex-row p-8 mx-auto">
 
-        <div class="one lg:w-1/2 bg-gray-700 xl:rounded-b-lg lg:rounded-l-lg">
+        <div class="one lg:w-1/2 bg-gray-700 lg:rounded-l-lg">
 
           <div class="p-10">        
             <h2 class="pb-5">Lamar Wilson</h2>
@@ -71,7 +71,7 @@
         
         <div class="two lg:w-1/2">
           <div>
-            <img class="rounded-t-lg lg:rounded-r-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
+            <img class="lg:rounded-r-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
           </div>
         </div>
       </div>
