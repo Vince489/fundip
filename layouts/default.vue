@@ -2,6 +2,9 @@
   <div>
     <Navbar />
   </div>
-    <slot class="flex justify-center gap-6 flex-wrap" />
+
+  <div class="container p-6">
+    <slot />
+  </div>
 </template>
 

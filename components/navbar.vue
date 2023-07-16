@@ -85,11 +85,6 @@
         </nuxt-link>
       </div>
     </nav>
-
-    <!--content goes here-->
-    <div class="container p-6 pt-24">
-      <slot />
-    </div>
     
   </div>
 </template>
