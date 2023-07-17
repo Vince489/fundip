@@ -9,9 +9,9 @@
 
     <div class="flex justify-center">
 
-      <div class="flex flex-col-reverse max-w-6xl lg:flex-row p-8 mx-auto">
+      <div class="flex flex-col-reverse max-w-6xl lg:flex-row p-4 pb-6 mx-auto">
 
-        <div class="one lg:w-1/2 bg-gray-700 lg:rounded-l-lg ">
+        <div class="one lg:w-1/2 bg-gray-200 rounded-b-lg ">
 
           <div class="p-10">        
             <h2 class="pb-5">Lamar Wilson</h2>
@@ -24,7 +24,7 @@
         
         <div class="two lg:w-1/2">
           <div>
-            <img class="lg:rounded-r-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
+            <img class="rounded-t-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
           </div>
         </div>
       </div>
@@ -32,15 +32,15 @@
 
     <div class="flex justify-center">
 
-      <div class="flex flex-col max-w-6xl lg:flex-row p-8 mx-auto">
+      <div class="flex flex-col max-w-6xl lg:flex-row p-4 pb-6 mx-auto">
 
         <div class="two lg:w-1/2">
           <div>
-            <img class="lg:rounded-l-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
+            <img class="rounded-tl-lg" src="https://virtronesports.com/img/lee-ko.png" alt="">
           </div>
         </div>     
 
-        <div class="one lg:w-1/2 bg-gray-700 lg:rounded-r-lg">
+        <div class="one lg:w-1/2 bg-gray-200 lg:rounded-bl-lg-none rounded-bl-lg rounded-br-lg">
 
           <div class="p-10">        
             <h2 class="pb-5">Lamar Wilson</h2>
@@ -56,9 +56,9 @@
 
     <div class="flex justify-center">
 
-      <div class="flex flex-col-reverse max-w-6xl lg:flex-row p-8 mx-auto">
+      <div class="flex flex-col-reverse max-w-6xl lg:flex-row p-4 pb-6 mx-auto">
 
-        <div class="one lg:w-1/2 bg-gray-700 lg:rounded-l-lg">
+        <div class="one lg:w-1/2 bg-gray-200 lg:rounded-l-lg">
 
           <div class="p-10">        
             <h2 class="pb-5">Lamar Wilson</h2>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-    </div>   
+    </div> 
 
   </section>
 
