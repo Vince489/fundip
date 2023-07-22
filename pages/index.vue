@@ -1,5 +1,8 @@
 <template>
 
+  <div class="pb-16">
+    <Hero />
+  </div>
 
   <section>
 
@@ -24,7 +27,9 @@
 </template>
 
 <script setup>
-
+  definePageMeta({
+    layout: 'home',
+  })
 </script>
 
 <style scoped>
