@@ -10,7 +10,7 @@
     <div class="w-54 h-60 content-center overflow-hidden">
       <div class="w-48 h-54 m-auto">
         <a :href="`/fighters/${fighter._id}`">
-          <img :src="`${fighter.image}`" class="fighter image" />
+          <img :src="`${fighter.image}`" class="fighter-image" />
         </a>
         
       </div>
@@ -68,3 +68,11 @@
 <script setup>
   const { fighter } = defineProps(['fighter'])
 </script>
+
+<style scoped>
+  .fighter-image {
+    width: 100%;
+    height: 200px; /* set the desired height */
+    object-fit: cover;
+  }
+</style>
