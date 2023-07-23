@@ -16,10 +16,18 @@
         
         <div class="two lg:w-1/2">
           <div>
-            <img class="rounded-t-xl lg:rounded-none lg:rounded-r-xl" src="https://virtronesports.com/img/lee-ko.png" alt="">
+            <img class="spotlight-image rounded-t-xl lg:rounded-none lg:rounded-r-xl" src="https://virtronesports.com/img/ko.png" alt="">
           </div>
         </div>
       </div>
     </div>
 </template>
+
+<style scoped>
+  .spotlight-image {
+    width: 100%;
+    height: 100%; /* set the desired height */
+    object-fit: cover;
+  }
+</style>
 

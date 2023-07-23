@@ -19,7 +19,7 @@
     </div>
 
     <div>
-      <Spotlight1 />
+      <Spotlight3 />
     </div>
 
   </section>

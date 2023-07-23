@@ -12,7 +12,6 @@
         <a :href="`/fighters/${fighter._id}`">
           <img :src="`${fighter.image}`" class="fighter-image" />
         </a>
-        
       </div>
     </div>
 

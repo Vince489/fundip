@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center items-center mt-32">
-    <div class="w-full max-w-xs">
+    <div class="w-full max-w-sm">
       <form @submit.prevent="handleSubmit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="gamerTag">
@@ -14,7 +14,7 @@
           </label>
           <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="gamerTag" type="email" placeholder="Email" v-model="email">
         </div>
-        <div class="mb-6">
+        <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
             Password
           </label>
@@ -25,6 +25,12 @@
           <button class="btn" type="button">
             Sign Up
           </button>
+        </div>
+        <div class="flex justify-center pt-2">
+          <p>Forgot your password?</p>
+        </div>
+        <div class="flex justify-center pt-2">
+          <p>Don't have an account? Create account</p>
         </div>
       </form>
       <!-- <p>Gamertag: {{ gamerTag }}</p>
