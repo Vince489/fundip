@@ -14,7 +14,7 @@
               SIM BOXING LEAGUE
             </h2>
             <p class="text-gray-300 text-base md:text-lg">
-              Don't leave it to the judges. Get in the ring and start boxing.
+              Don't leave it to the judges.
             </p>
             <button class="px-4 py-2 rounded-full bg-blue-500 text-white">
               Join Now!
