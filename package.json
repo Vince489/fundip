@@ -9,9 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.2.0",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.2.0",
     "@types/node": "^18",
     "nuxt": "^3.6.1"
+  },
+  "dependencies": {
+    "mongoose": "^7.4.0"
   }
 }
