@@ -1,10 +1,12 @@
 <template>
-  <div class="">
-    <div class="card text-center">
-    <p>Fighter ID: {{ fighter._id }}</p>
-    <p>{{ fighter.firstName }}</p>
-    <p>{{ fighter.lastName }}</p>
-    <img :src="fighter.image" alt="fighter image">
+  <div class="flex max-w-5xl">
+    <div class="max-w-md p-6 bg-slate-600 m-12 rounded-xl">
+      <img :src="fighter.image" alt="fighter image">
+    </div>
+    <div class="card text-center border-4 ">
+      <p>Fighter ID: {{ fighter._id }}</p>
+      <p>{{ fighter.firstName }}</p>
+      <p>{{ fighter.lastName }}</p>
     <p>{{ fighter.wins }} Wins</p>
     <p>Overall: {{ fighter.ovr }}</p>   
   </div>
