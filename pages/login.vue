@@ -9,12 +9,6 @@
           <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="gamerTag" type="text" placeholder="Gamertag" v-model="gamerTag">
         </div>
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-            Email
-          </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" v-model="email">
-        </div>
-        <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
             Password
           </label>
@@ -23,7 +17,7 @@
         </div>
         <div class="flex justify-center">
           <button class="btn" type="submit">
-            Sign Up
+            Login
           </button>
         </div>
       </form>
@@ -39,21 +33,20 @@ export default {
   data() {
     return {
       gamerTag: '',
-      email: '',
       password: ''
     }
   },
   methods: {
     async handleSubmit() {
       try {
-        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer/signup', {
+        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             gamerTag: this.gamerTag,
-            email: this.email,
             password: this.password
           })
         })
@@ -66,11 +59,10 @@ export default {
 
         // Clear the inputs
         this.gamerTag = ''
-        this.email = ''
         this.password = ''
 
         // Redirect to verify page
-        this.$router.push('/verify')
+        this.$router.push('/')
       } catch (error) {
         console.error(error)
       }

@@ -13,7 +13,7 @@
           <label class="block text-gray-700 text-sm font-bold mb-2" for="otp">
             OTP
           </label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="otp" type="number" placeholder="****" v-model="otp">
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="otp" type="text" placeholder="****" v-model="otp">
           <p class="hidden text-red-500 text-xs italic">Please type your OTP.</p>
         </div>
         <div class="flex justify-center">
@@ -42,6 +42,7 @@ export default {
       try {
         const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/email_verification/verify', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json'
           },

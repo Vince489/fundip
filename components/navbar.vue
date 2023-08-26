@@ -43,7 +43,7 @@
 
           <!--second nav-->
           <div class="hidden md:flex items-center space-x-3">
-            <nuxt-link to="#login" class="font-semibold py-1 px-3 text-gray-700">Login</nuxt-link>
+            <nuxt-link to="login" class="font-semibold py-1 px-3 text-gray-700">Login</nuxt-link>
             <nuxt-link to="signup" class="btn">Sign up</nuxt-link>
           </div>          
 
