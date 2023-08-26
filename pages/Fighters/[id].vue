@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-5xl">
+  <div class="max-w-5xl">
     <div class="max-w-md p-6 bg-slate-600 m-12 rounded-xl">
       <img :src="fighter.image" alt="fighter image">
     </div>

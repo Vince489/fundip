@@ -22,25 +22,15 @@
           <p class="hidden text-red-500 text-xs italic">Please choose a password.</p>
         </div>
         <div class="flex justify-center">
-          <button class="btn" type="button">
+          <button class="btn" type="submit">
             Sign Up
           </button>
         </div>
-        <div class="flex justify-center pt-2">
-          <p>Forgot your password?</p>
-        </div>
-        <div class="flex justify-center pt-2">
-          <p>Don't have an account? Create account</p>
-        </div>
       </form>
-      <!-- <p>Gamertag: {{ gamerTag }}</p>
-      <p>Email: {{ email }}</p>
-      <p>Password: {{ password }}</p> -->
-
       <p class="text-center text-gray-500 text-xs">
         &copy;2023 Planet Virtron. All rights reserved.
       </p>
-</div>
+    </div>
   </div>
 </template>
 
@@ -54,14 +44,48 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      console.log('form submitted')
+    async handleSubmit() {
+      try {
+        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            gamerTag: this.gamerTag,
+            email: this.email,
+            password: this.password
+          })
+        })
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form')
+        }
+
+        console.log('Form submitted successfully')
+
+        // Clear the inputs
+        this.gamerTag = ''
+        this.email = ''
+        this.password = ''
+
+        // Redirect to verify page
+        this.$router.push('/verify')
+      } catch (error) {
+        console.error(error)
+      }
     }
   }
 }
-
 </script>
 
 <style scoped>
 
 </style>
+
+<script>
+
+
+
+
+</script>
