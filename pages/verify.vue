@@ -1,8 +1,10 @@
 <template>
   <div class="flex justify-center items-center mt-32">
     <div class="w-full max-w-sm">
+      <div>
+        <h1 class="p-10">Verify Email</h1>
+      </div>
       <form @submit.prevent="handleSubmit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
             Email
