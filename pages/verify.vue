@@ -62,7 +62,7 @@ export default {
         this.email = ''
         this.otp = ''
 
-        this.$router.push('/events')
+        this.$router.push('/login')
       } catch (error) {
         console.log(error.message)
       }
