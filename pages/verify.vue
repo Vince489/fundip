@@ -61,8 +61,8 @@ export default {
         console.log('Form submitted successfully')
 
         // Clear the inputs
-        this.email = ''
-        this.otp = ''
+        // this.email = ''
+        // this.otp = ''
 
         this.$router.push('/login')
       } catch (error) {
