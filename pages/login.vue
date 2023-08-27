@@ -42,7 +42,7 @@ export default {
   methods: {
     async handleSubmit() {
       try {
-        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer', {
+        const response = await fetch('http://localhost:4040/api/v1/gamer', {
           method: 'POST',
           mode: 'cors',
           headers: {
@@ -57,7 +57,7 @@ export default {
         if (!response.ok) {
           throw new Error('Failed to submit form')
         }
-
+        console.log(response)
         console.log('Form submitted successfully')
 
         // Clear the inputs
