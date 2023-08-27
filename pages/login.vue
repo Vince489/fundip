@@ -42,33 +42,30 @@ export default {
   methods: {
     async handleSubmit() {
       try {
-        const response = await fetch('http://localhost:4040/api/v1/gamer', {
-          method: 'POST',
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            gamerTag: this.gamerTag,
-            password: this.password
-          })
-        })
+        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      body: JSON.stringify({
+      gamerTag: this.gamerTag,
+      password: this.password
+    })
+  });
 
-        if (!response.ok) {
-          throw new Error('Failed to submit form')
-        }
-        console.log(response)
-        console.log('Form submitted successfully')
+  if (!response.ok) {
+    throw new Error('Failed to submit form');
+  }
 
-        // Clear the inputs
-        this.gamerTag = ''
-        this.password = ''
-
-        // Redirect to verify page
-        this.$router.push('/')
-      } catch (error) {
-        console.error(error)
-      }
+  const responseData = await response.json();
+  // sessionStorage.setItem('token', responseData.token)
+  // console.log(responseData);
+  document.cookie = `token=${responseData.token}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+  console.log('Form submitted successfully');
+} catch (error) {
+  console.error(error);
+}
     }
   }
 }

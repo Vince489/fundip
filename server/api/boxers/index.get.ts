@@ -3,3 +3,7 @@ export default defineEventHandler((event) => {
     boxers: 'boxers'
   }
 })
+
+// set a key value pair in cookies
+
+
