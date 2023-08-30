@@ -51,6 +51,7 @@ export default {
       try {
         const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer/signup', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json'
           },

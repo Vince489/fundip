@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h2>About Planet Virtron</h2>
+    <h1>About Page</h1>
+    <!-- Your content -->
   </div>
-
 </template>
 
-<script setup>
-
+<script>
+export default {
+  middleware: 'auth', // Apply the auth middleware to this page
+}
 </script>
-
-<style scoped>
-
-</style>
