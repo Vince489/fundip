@@ -45,14 +45,13 @@ export default {
         const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer', {
         method: 'POST',
         mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      body: JSON.stringify({
-      gamerTag: this.gamerTag,
-      password: this.password
-    })
-  });
+        headers: {'Content-Type': 'application/json'},
+        // credentials: 'include',
+        body: JSON.stringify({
+          gamerTag: this.gamerTag,
+          password: this.password
+        })
+      });
 
   if (!response.ok) {
     throw new Error('Failed to submit form');
