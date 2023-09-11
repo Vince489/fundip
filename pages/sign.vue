@@ -35,7 +35,6 @@ export default {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        document.cookie = `token=${data.token}; Secure; HttpOnly`;
         
         this.$router.push("/dashboard");
       } else {
