@@ -20,6 +20,7 @@ export default {
     async signup() {
       const response = await fetch("https://test-virtue-production.up.railway.app/api/v1/gamer/signup", {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -33,7 +34,6 @@ export default {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        document.cookie = `token=${data.token}`
         
         this.$router.push("/dashboard");
       } else {
