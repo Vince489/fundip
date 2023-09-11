@@ -21,6 +21,7 @@ export default {
       const response = await fetch("https://test-virtue-production.up.railway.app/api/v1/gamer/signup", {
         method: "POST",
         mode: "cors",
+        credentials: "include", // Include cookies in the request
         headers: {
           "Content-Type": "application/json",
         },
