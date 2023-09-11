@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     async signup() {
-      const response = await fetch("http://localhost:4400/api/v1/gamer/signup", {
+      const response = await fetch("https://test-virtue-production.up.railway.app/gamer/signup", {
         method: "POST",
         mode: "cors",
         headers: {
