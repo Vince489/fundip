@@ -28,7 +28,6 @@ export default {
           email: this.email,
           password: this.password,
         }),
-        credentials: "include", // Include cookies in the request
       });
 
       if (response.ok) {
