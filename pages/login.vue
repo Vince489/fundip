@@ -46,7 +46,7 @@ export default {
         method: 'POST',
         mode: 'cors',
         headers: {'Content-Type': 'application/json'},
-        // credentials: 'include',
+        credentials: 'include',
         body: JSON.stringify({
           gamerTag: this.gamerTag,
           password: this.password
@@ -57,10 +57,10 @@ export default {
     throw new Error('Failed to submit form');
   }
 
-  const responseData = await response.json();
+  // const responseData = await response.json();
   // sessionStorage.setItem('token', responseData.token)
   // console.log(responseData);
-  document.cookie = `token=${responseData.token}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+  // document.cookie = `token=${responseData.token}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
   console.log('Form submitted successfully');
 } catch (error) {
   console.error(error);
