@@ -62,6 +62,7 @@ export default {
   // console.log(responseData);
   // document.cookie = `token=${responseData.token}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
   console.log('Form submitted successfully');
+  this.$router.push('/dashboard');
 } catch (error) {
   console.error(error);
 }
