@@ -1,14 +1,55 @@
 <template>
-  <div class="max-w-5xl">
-    <div class="max-w-md p-6 bg-slate-600 m-12 rounded-xl">
-      <img :src="fighter.image" alt="fighter image">
+  <div>
+    <div class="flex justify-center font-bold pb-4">
+      <p class="text-2xl">{{ fighter.firstName }} {{ fighter.lastName }}</p>
     </div>
-    <div class="card text-center border-4 ">
-      <p>Fighter ID: {{ fighter._id }}</p>
-      <p>{{ fighter.firstName }}</p>
-      <p>{{ fighter.lastName }}</p>
-    <p>{{ fighter.wins }} Wins</p>
-    <p>Overall: {{ fighter.ovr }}</p>   
+
+    <div class="text-center record gap-0.5 flex justify-center font-bold text-white">      
+    <div class="wins bg-green-600 px-6 pb-1 rounded-l-lg">
+      <p class="text-3xl">{{ fighter.wins }}</p>
+    </div>
+    
+    <div class="losses bg-red-600 px-6 pb-1">
+      <p class="text-3xl">{{ fighter.losses }}</p>
+    </div>
+    
+    <div class="draws bg-blue-400 px-6 pb-1 rounded-r-lg">
+      <p class="text-3xl">{{ fighter.draws }}</p>
+    </div>  
+  </div>
+  </div>
+  
+  <div class="record gap-6 flex justify-center font-bold">      
+    <div class="wins">
+      <p class="text-green-600">{{ fighter.knockouts }} KOs</p>
+    </div>
+    
+    <div class="losses">
+      <p class="text-red-600">{{ fighter.lossesByKnockout }} KOs</p>
+    </div>
+    
+    <div class="draws px-6 rounded-r-lg">
+      <p class="text-white">{{ fighter.draws }}</p>
+    </div>  
+  </div>
+
+  <div class="flex justify-center">
+    <div class="w-52 p-1 bg-slate-600 m-2 rounded-xl">
+      <img class="rounded-xl" :src="fighter.image" alt="fighter image">
+    </div>
+  </div>
+
+  <div class="max-w-5xl">
+    <div class="card m-10 border-4 ">
+      <p>ID: {{ fighter._id }}</p>
+      <p>Division: {{ fighter.weightClass }}</p>
+      <p>Overall: {{ fighter.ovr }}</p>
+      <p>Stance: {{ fighter.stance }}</p>      
+      <p>Bouts: {{ fighter.fights }}</p>
+      <p>Rounds: {{ fighter.rounds }}</p>
+      <p>Nationality: {{ fighter.nationality }}</p>
+      <p>Residence: {{ fighter.residence }}</p>
+         
   </div>
   </div>
   
