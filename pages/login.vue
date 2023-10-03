@@ -57,9 +57,9 @@ export default {
           throw new Error('Failed to submit form');
         }
 
-        // const responseData = await response.json();
-        // sessionStorage.setItem('token', responseData.token)
-        // sessionStorage.setItem('authenticatedGamer', JSON.stringify(responseData.authenticatedGamer));
+        const responseData = await response.json();
+        sessionStorage.setItem('token', responseData.token)
+        sessionStorage.setItem('authenticatedGamer', JSON.stringify(responseData.authenticatedGamer));
         console.log('Form submitted successfully');
         this.$router.push('/dashboard');
       } catch (error) {
