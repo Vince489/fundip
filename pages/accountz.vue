@@ -111,7 +111,9 @@ async addAccount() {
     }
 
     // Retrieve the gamerTag from sessionStorage
-    const gamerTag = sessionStorage.getItem('gamerTag');
+    const authenticatedGamer = JSON.parse(sessionStorage.getItem('authenticatedGamer'));
+
+    const gamerTag = authenticatedGamer.gamerTag;
 
     if (!gamerTag) {
       console.error('No gamerTag found in sessionStorage.');
