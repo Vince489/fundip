@@ -33,6 +33,7 @@
 
   <!-- Disable the button if isAccountCreated is true -->
   <button @click="createNewAccount" :disabled="isAccountCreated" class="bg-blue-500 text-white p-2 rounded cursor-pointer">Create New Account</button>
+  
   <button @click="addAccount" class="bg-red-400 text-white p-2 rounded cursor-pointer m-6">Add Account to Gamer</button>
 </template>
 
@@ -53,7 +54,7 @@ export default {
   methods: {
     async createNewAccount() {
       try {
-        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/account', {
+        const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/account/', {
           method: 'POST',
         });
 
@@ -99,12 +100,12 @@ export default {
         // Get the gamerTag from the authenticatedGamer object
         const gamerTag = authenticatedGamer.gamerTag;
 
-        // console.log(gamerTag);
+        console.log(gamerTag);
 
         // Replace 'accountId' with the actual value you want to send.
         const accountId = sessionStorage.getItem('accountId');
 
-        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer/add-account', {
+        const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/gamer/add-account', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -113,6 +114,7 @@ export default {
             gamerTag,
             accountId,
           }),
+
         });
 
         if (!response.ok) {
