@@ -53,49 +53,49 @@ export default {
   },
   methods: {
     async createNewAccount() {
-      try {
-        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/account/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          mode: 'cors',
-          credentials: 'include', // Include cookies in the request
-        });
+  try {
+    const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/account/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+      credentials: 'include', // Include cookies in the request
+    });
 
-        if (!response.ok) {
-          throw new Error('Failed to create a new account');
-        }
+    if (!response.ok) {
+      throw new Error('Failed to create a new account');
+    }
 
-        const data = await response.json();
+    const data = await response.json();
 
-        // Check if the response has the expected structure
-        if (data && Array.isArray(data.seedPhrase) && data.seedPhrase.length === 1) {
-          // Access the seed phrase as an array with a single string element
-          const seedPhraseString = data.seedPhrase[0];
+    // Check if the response has the expected structure
+    if (data && data.seedPhrase) {
+      // Access the seed phrase directly as a string
+      const seedPhraseString = data.seedPhrase;
 
-          // Handle the response data here and update your component's data properties.
-          this.seedPhraseArray = seedPhraseString.split(' ');
-          this.publicKey = data.account.publicKey;
-          this.privateKey = data.account.privateKey;
+      // Handle the response data here and update your component's data properties.
+      this.seedPhraseArray = seedPhraseString.split(' ');
+      this.publicKey = data.account.publicKey;
+      this.privateKey = data.account.privateKey;
 
-          // Set the flag to indicate that the account is created
-          this.isAccountCreated = true;
-          console.log(this.isAccountCreated);
+      // Set the flag to indicate that the account is created
+      this.isAccountCreated = true;
+      console.log(this.isAccountCreated);
 
-          // Add accountId to sessionStorage
-          const accountId = data.account._id; // Assuming that accountId is present in the response
-          sessionStorage.setItem('accountId', accountId);
+      // Add accountId to sessionStorage
+      const accountId = data.account._id; // Assuming that accountId is present in the response
+      sessionStorage.setItem('accountId', accountId);
 
-          // Now, accountId is stored in sessionStorage and can be accessed later
-        } else {
-          throw new Error('Unexpected response structure');
-        }
-      } catch (error) {
-        console.error('Error creating a new account:', error);
-        // Handle the error as needed (e.g., show an error message).
-      }
-    },
+      // Now, accountId is stored in sessionStorage and can be accessed later
+    } else {
+      throw new Error('Unexpected response structure');
+    }
+  } catch (error) {
+    console.error('Error creating a new account:', error);
+    // Handle the error as needed (e.g., show an error message).
+  }
+},
 
     async addAccount() {
       try {
