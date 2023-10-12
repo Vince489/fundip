@@ -54,7 +54,7 @@ export default {
   methods: {
     async createNewAccount() {
       try {
-        const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/account/', {
+        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/account/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export default {
         // Replace 'accountId' with the actual value you want to send.
         const accountId = sessionStorage.getItem('accountId');
 
-        const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/gamer/add-account', {
+        const response = await fetch('https://planet-virtron-api-production.up.railway.app/api/v1/gamer/add-account', {
           method: 'POST',
           mode: 'cors',
           credentials: 'include', // Include cookies in the request
