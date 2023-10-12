@@ -56,6 +56,11 @@ export default {
       try {
         const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/account/', {
           method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'cors',
+          credentials: 'include', // Include cookies in the request
         });
 
         if (!response.ok) {
