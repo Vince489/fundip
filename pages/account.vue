@@ -104,6 +104,7 @@ export default {
 
         // Get the gamerTag from the authenticatedGamer object
         const gamerTag = authenticatedGamer.gamerTag;
+        console.log(gamerTag);
 
 
         // Replace 'accountId' with the actual value you want to send.
