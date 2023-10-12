@@ -97,50 +97,54 @@ export default {
       }
     },
 
-    async addAccount() {
-      try {
-        // Get the authenticatedGamer object from sessionStorage
-        const authenticatedGamer = JSON.parse(sessionStorage.getItem('authenticatedGamer'));
+    
 
-        // Get the gamerTag from the authenticatedGamer object
-        const gamerTag = authenticatedGamer.gamerTag;
+async addAccount() {
+  try {
+    // Fetch the accountId from sessionStorage
+    const accountId = sessionStorage.getItem('accountId');
 
-
-        // Replace 'accountId' with the actual value you want to send.
-        const accountId = sessionStorage.getItem('accountId');
-
-        const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/gamer/add-account', {
-          method: 'POST',
-          mode: 'cors',
-          credentials: 'include', // Include cookies in the request
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            gamerTag: gamerTag,
-            accountId: accountId,
-          }),
-
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to associate account with gamer');
-        }
-
-        // Handle a successful response (e.g., display a success message).
-        console.log('Account associated successfully.');
-
-        // Clear the form by resetting the data properties
-        this.seedPhraseArray = [];
-        this.publicKey = '';
-        this.privateKey = '';
-      } catch (error) {
-        console.error('Error adding account to gamer:', error);
-        // Handle the error as needed (e.g., show an error message).
-      }
+    if (!accountId) {
+      // Handle the case where accountId is not available in sessionStorage
+      console.error('No accountId found in sessionStorage.');
+      return;
     }
+
+    // Retrieve the gamerTag from sessionStorage
+    const gamerTag = sessionStorage.getItem('gamerTag');
+
+    if (!gamerTag) {
+      console.error('No gamerTag found in sessionStorage.');
+      return;
+    }
+
+    // Send a POST request to your API to associate the account with the gamer
+    const response = await fetch('https://test-virtue-production.up.railway.app/api/v1/gamer/add-account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        gamerTag: gamerTag, // Use the retrieved gamerTag
+        accountId: accountId,
+      }),
+      mode: 'cors',
+      credentials: 'include', // Include cookies in the request
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to associate the account with the gamer');
+    }
+
+    // Handle success, update your component as needed
+    // For example, you can reset the isAccountCreated flag and clear the accountId from sessionStorage
+    this.isAccountCreated = false;
+    sessionStorage.removeItem('accountId');
+    console.log('Account associated with gamer successfully');
+  } catch (error) {
+    console.error('Error associating account with gamer:', error);
+    // Handle the error as needed (e.g., show an error message).
+  }
+}
   },
 };
-</script>
-
-
