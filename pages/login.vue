@@ -46,6 +46,7 @@ export default {
           method: 'POST',
           mode: 'cors',
           headers: { 'Content-Type': 'application/json' },
+          
           credentials: 'include',
           body: JSON.stringify({
             gamerTag: this.gamerTag,
