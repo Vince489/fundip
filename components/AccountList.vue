@@ -6,7 +6,7 @@
       <h3>Accounts:</h3>
       <ul>
         <li v-for="account in accounts" :key="account._id">
-          {{ account.publicKey }}
+          {{ account }}
         </li>
       </ul>
     </div>

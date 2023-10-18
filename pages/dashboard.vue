@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Welcome {{ gamerTag }}</h1>
+    <p>Email: {{ email }}</p>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ export default {
 
       // Extract the gamerTag and set it in the component's data
       this.gamerTag = authenticatedGamer.gamerTag;
+      this.email = authenticatedGamer.email;
     }
   },
 };
