@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- navbar goes here -->
-    <nav id="navbar" class="z-40 bg-gray-800 fixed inset-x-0">
+    <nav id="navbar" class="z-40 bg-gray-700 fixed inset-x-0">
       <div class="px-6 pb-1 mx-auto">
         <div class="flex justify-between">
           <div class="flex space-x-4">

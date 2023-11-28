@@ -2,9 +2,9 @@
   <div class="flex justify-center items-center mt-32">
     <div class="w-full max-w-sm">
       <div>
-        <h1 class="p-10">Signup</h1>
+        <h1 class="pb-6 text-4xl">Signup</h1>
       </div>
-      <form @submit.prevent="handleSubmit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form @submit.prevent="handleSubmit" class="bg-gray-400  shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="gamerTag">
             Gamertag
@@ -30,9 +30,6 @@
           </button>
         </div>
       </form>
-      <p class="text-center text-gray-500 text-xs">
-        &copy;2023 Planet Virtron. All rights reserved.
-      </p>
     </div>
   </div>
 </template>

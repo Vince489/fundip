@@ -3,9 +3,9 @@
     <h1 class="text-3xl font-semibold mr-8 mb-4 md:mb-0">All Fighters</h1>
     <div class="flex flex-col md:flex-row">
       <div class="flex justify-between items-center pr-4">
-        <input type="text" class="border border-gray-300 rounded-md py-2 px-4 w-full md:w-96" placeholder="Search fighters...">
+        <input type="text" class="border border-gray-300 text-gray-800 rounded-md py-2 px-4 w-full md:w-96" placeholder="Search fighters...">
       </div>
-      <div class="relative mt-4 md:mt-0 md:ml-4">
+      <div class="relative mt-4 md:mt-0 md:ml-4 text-gray-800">
         <select v-model="selectedWeightClass"
           class="border border-gray-300 rounded-md py-2 px-4 appearance-none w-full md:w-auto">
           <option value="">Weight Class</option>
