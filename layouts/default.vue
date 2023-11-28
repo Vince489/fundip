@@ -3,7 +3,7 @@
     <Navbar />
   </div>
 
-  <div class="pt-28">
+  <div class="pt-14 bg-gray-800">
     <slot />
   </div>
 </template>
