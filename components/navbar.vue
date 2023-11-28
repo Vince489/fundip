@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- navbar goes here -->
-    <nav id="navbar" class="z-40 bg-gray-300 fixed inset-x-0">
+    <nav id="navbar" class="z-40 bg-gray-700 fixed inset-x-0">
       <div class="px-6 pb-1 mx-auto">
         <div class="flex justify-between">
           <div class="flex space-x-4">
@@ -9,7 +9,7 @@
             <div>
               <nuxt-link
                 to="/"
-                class="flex items-center py-3 px-3 text-gray-700"
+                class="flex items-center py-3 px-3 text-gray-300"
               >
                 <svg
                   class="w-7 h-7 mr-1 text-green-700"
@@ -33,17 +33,17 @@
             <!-- primary nav-->
             <div class="hidden md:flex items-center space-x-3">
 
-              <nuxt-link to="/fighters" class="font-semibold py-3 px-3 text-gray-700">Fighters</nuxt-link>
-              <nuxt-link to="/ebca" class="font-semibold py-3 px-3 text-gray-700">EBCA</nuxt-link>
-              <nuxt-link to="/about" class="font-semibold py-3 px-3 text-gray-700">About</nuxt-link>
-              <nuxt-link to="#/contact" class="font-semibold py-3 px-3 text-gray-700">Contact</nuxt-link>
+              <nuxt-link to="/fighters" class="font-semibold py-3 px-3 text-gray-300">Fighters</nuxt-link>
+              <nuxt-link to="/ebca" class="font-semibold py-3 px-3 text-gray-300">EBCA</nuxt-link>
+              <nuxt-link to="/about" class="font-semibold py-3 px-3 text-gray-300">About</nuxt-link>
+              <nuxt-link to="#/contact" class="font-semibold py-3 px-3 text-gray-300">Contact</nuxt-link>
 
             </div>
           </div>
 
           <!--second nav-->
           <div class="hidden md:flex items-center space-x-3">
-            <nuxt-link to="login" class="font-semibold py-1 px-3 text-gray-700">Login</nuxt-link>
+            <nuxt-link to="login" class="font-semibold py-1 px-3 text-gray-300">Login</nuxt-link>
             <nuxt-link to="signup" class="btn">Sign up</nuxt-link>
           </div>          
 

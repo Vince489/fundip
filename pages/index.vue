@@ -7,7 +7,7 @@
   <section>
 
     <div class="flex justify-center pb-10">
-      <h1 class="text-3xl font-semibold">IN THE SPOTLIGHT</h1>
+      <h1 class="text-4xl font-semibold">IN THE SPOTLIGHT</h1>
     </div>
 
     <div>
