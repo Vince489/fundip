@@ -4,8 +4,13 @@
     <div class="boxer-name font-bold pb-4 text-center text-gray-700">
       <h2>{{ fighter.firstName }} {{ fighter.lastName }}</h2>
     </div>
+
+    <!-- If fighter has a belt, display in the top right corner -->
+    <div v-if="fighter.belt" class="absolute top-0.5 mt-3 right-0.5 mr-3">
+      <img :src="fighter.belt" class="belt-image" />
+    </div>
     
-    <div class="absolute top-0.5 mt-3 left-0.5 ml-3 bg-[#3672bb] font-semibold text-gray-200 px-3 py-2 rounded-full text-sm">{{ fighter.ovr }}</div>
+    <div class="absolute top-0.5 mt-3 left-0.5 ml-3 bg-[#0b7696] font-semibold text-gray-200 px-3 py-2 rounded-full text-sm">{{ fighter.ovr }}</div>
     
     <div class="w-54 h-60 content-center overflow-hidden">
       <div class="w-48 h-54 m-auto">
@@ -15,24 +20,27 @@
       </div>
     </div>
 
-    
+    <div class="flex text-gray-700 justify-center font-bold pb-2">
+      <p class="text-xl">GT: @{{ fighter.gamerTag }} </p>
+    </div>    
+
     <div>  
       <div class="boxer-name font-bold py-2 text-center text-gray-700">
         <h3>"{{ fighter.nickname }}"</h3>
       </div>
     
       <div class="text-center record gap-1 flex justify-center font-bold text-gray-200">      
-        <div class="wins bg-green-600 py-1 px-6 rounded">
+        <div class="wins bg-green-700 py-1 px-6 rounded">
           <p>{{ fighter.wins }}</p>
           <span>WINS</span>                 
         </div>
     
-        <div class="losses bg-red-600 p-1 px-6 rounded">
+        <div class="losses bg-red-800 p-1 px-6 rounded">
           <p>{{ fighter.losses }}</p>
           <span>LOSSES</span>          
         </div>
     
-        <div class="draws bg-blue-400 p-1 px-6 rounded">
+        <div class="draws bg-[#0b7696] p-1 px-6 rounded">
           <p>{{ fighter.draws }}</p>
           <span>DRAWS</span>          
         </div>  
@@ -43,7 +51,7 @@
           <div class="wins text-green-700">
             <p>{{ fighter.knockouts }} <span> KO WINS</span></p>        
           </div>
-          <div class="losses text-red-700">
+          <div class="losses text-red-800">
             <p>{{ fighter.lossesByKnockout }} <span>KO LOSSES</span></p>
           </div>
         </div>
@@ -74,4 +82,7 @@
     height: 200px; /* set the desired height */
     object-fit: cover;
   }
+
+  .belt-image {
+    width: 50px;  }
 </style>

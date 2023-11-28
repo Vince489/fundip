@@ -9,11 +9,11 @@
             <h2 class="pb-5 text-2xl">Lamar Wilson</h2>
             <h3 class="pb-3">XBOX - Metabox Promotions</h3>
             <p class="pb-5">Middleweight prospect advances to (6-0-0) with his Unanimous Decision win over Gomez.</p>
-            <button class="px-4 py-2 rounded-full bg-blue-500 text-gray-300">FULL FIGHT</button>
+            <button class="px-4 py-2 rounded-full bg-[#0b7696] text-gray-300">FULL FIGHT</button>
           </div>
 
         </div>
-        
+         
         <div class="two lg:w-1/2">
           <div>
             <img class="spotlight-image rounded-t-xl lg:rounded-none lg:rounded-r-xl" src="https://virtronesports.com/img/ko.png" alt="">
