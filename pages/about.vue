@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 text-white py-16">
+  <div class="py-16">
     <div class="container mx-auto px-4 max-w-5xl">
       <h1 class="text-4xl font-bold mb-8 text-center">About Virtron Boxing Club</h1>
 
@@ -18,7 +18,7 @@
           VBC proudly collaborates with esteemed organizations such as the Esports Boxing Commission Association (EBCA) and the Virtron Athletic Division Alliance (VADA). These alliances underscore our commitment to fair play, sportsmanship, and the highest standards in virtual sports entertainment.
         </p>
         <p class="mb-8">
-          VBC is also proud to partner with the World Boxing Council (WBC), the World Boxing Association (WBA), the International Boxing Federation (IBF), and the World Boxing Organization (WBO). These partnerships allow us to bring you the most authentic virtual boxing experience possible.
+          VBC also seeks to partner with the World Boxing Council (WBC), the World Boxing Association (WBA), the International Boxing Federation (IBF), and the World Boxing Organization (WBO). These partnerships allow us to bring you the most authentic virtual boxing experience possible.
         </p>
       </div>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- navbar goes here -->
-    <nav id="navbar" class="z-40 bg-gray-700 fixed inset-x-0">
+    <nav id="navbar" class="pt-2 z-40 bg-gray-700 fixed inset-x-0">
       <div class="px-6 pb-1 mx-auto">
         <div class="flex justify-between">
           <div class="flex space-x-4">
@@ -12,7 +12,7 @@
                 class="flex items-center py-3 px-3 text-gray-300"
               >
                 <svg
-                  class="w-7 h-7 mr-1 text-green-700"
+                  class="w-7 h-7 mr-1 text-[#419296]" 
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
