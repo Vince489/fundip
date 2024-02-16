@@ -2,11 +2,19 @@
   <div>
     <!-- navbar goes here -->
     <nav id="navbar" class="pt-2 z-40 bg-gray-700 fixed inset-x-0">
-      <div class="px-6 pb-1 mx-auto">
+      <div class="px-6 pb-2 mx-auto">
         <div class="flex justify-between">
           <div class="flex space-x-4">
             <!-- logo -->
+            <div>
+              <nuxt-link
+                to="/"
+                class="flex items-center py-3 px-3 text-gray-100">
+                
 
+                <span class="text-3xl font-bold">VBC</span>
+              </nuxt-link>
+            </div>
 
             <!-- primary nav-->
             <div class="hidden md:flex items-center space-x-3">
@@ -27,7 +35,7 @@
 
 
           <!-- mobile button-->
-          <div id="menu-btn" class="md:hidden flex items-center">
+          <div id="menu-btn" class="text-gray-100 md:hidden flex items-center">
             <button @click="toggleMenu" class="mobile-menu-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
